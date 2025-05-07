@@ -26,7 +26,7 @@ Inside the `asv-scanner` folder, run:
 ```bash
 python3 main.py
 ```
-##
+
 And go to `cve_api` folder, run:
 
 ```bash

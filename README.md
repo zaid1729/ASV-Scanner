@@ -26,8 +26,15 @@ Inside the `asv-scanner` folder, run:
 ```bash
 python3 main.py
 ```
+##
+And go to `cve_api` folder, run:
 
-Then enter your **target domain or IP address** when prompted.
+```bash
+python3 api.py
+```
+The server is listening on `http://127.0.0.1:8000` for the CVE Database.
+
+Then enter your **target or the Scope** when prompted.
 
 Example:
 ```bash
@@ -62,6 +69,10 @@ scanner/
 │   ├── dns_smtp_icmp.py
 │   ├── passive_web.py
 │   └── zap_scanner.py
+├── cve_api/                  # Helper tools
+│   ├── api.py
+├── data/                  # Helper tools
+│   ├── # this is where the CVE database is located 
 ├── requirements.txt
 ```
 

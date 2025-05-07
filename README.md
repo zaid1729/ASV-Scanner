@@ -80,7 +80,7 @@ scanner/
 
 ## ⚠️ Notes
 
-- Requires **Nmap** installed on your system.
+- Requires **Nmap3** installed on your system.
 - Make sure OWASP ZAP is running at `http://127.0.0.1:8080` if using active scan.
 - Works best on **Linux-based OS** (Ubuntu, Kali, etc.)
 

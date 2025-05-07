@@ -1,0 +1,8 @@
+requests
+beautifulsoup4
+python3-nmap
+dnspython
+python-owasp-zap-v2.4
+weasyprint
+jinja2
+

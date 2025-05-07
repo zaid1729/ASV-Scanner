@@ -82,6 +82,7 @@ scanner/
 
 - Requires **Nmap3** installed on your system.
 - Make sure OWASP ZAP is running at `http://127.0.0.1:8080` if using active scan.
+- For the purpose of simplicifity, in ZAP PRoxy go to `Tools > Options > API` and disable API key option in ZAP Proxy.
 - Works best on **Linux-based OS** (Ubuntu, Kali, etc.)
 
 ---

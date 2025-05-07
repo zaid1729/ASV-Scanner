@@ -21,18 +21,18 @@ pip install -r requirements.txt
 
 ## 🚀 How to Run
 
-Inside the `asv-scanner` folder, run:
-
-```bash
-python3 main.py
-```
-
-And go to `cve_api` folder, run:
+First, go to `cve_api` folder, run:
 
 ```bash
 python3 api.py
 ```
 The server is listening on `http://127.0.0.1:8000` for the CVE Database.
+
+After, go Inside the `asv-scanner` folder, run:
+
+```bash
+python3 main.py
+```
 
 Then enter your **target or the Scope** when prompted.
 

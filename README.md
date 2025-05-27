@@ -66,6 +66,7 @@ scanner/
 ├── utils/                  # Helper tools
 │   ├── tls_scanner.py
 │   ├── cve_api.py
+│   ├── proxies_checker.py
 │   ├── dns_smtp_icmp.py
 │   ├── passive_web.py
 │   └── zap_scanner.py

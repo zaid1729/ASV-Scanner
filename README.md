@@ -5,12 +5,26 @@ A multi-threaded security scanner that checks for:
 - SSL/TLS security (certificates, weak ciphers)
 - DNS zone transfers, SMTP open relays, ICMP exposure
 - Web application security (external scripts, ZAP scan)
-- PCI DSS-compliant reporting (JSON + console summary)
+- PCI DSS-compliant reporting (JSON + console summary + PDf format)
 
 ---
 
 ## 📦 Requirements
+Before installing requirements, it is recommended to create a python virtual environment to evade collision between  python dependicies:
+- Create environment before starting the project:
+```bash
+python3 -m venv myenv
+```
+- Activate your environment:
+```bash
+source myenv/bin/activate
+```
+- Deactivate when you are done:
+```bash
+deactivate
+```
 
+##
 Install dependencies:
 
 ```bash
@@ -21,17 +35,21 @@ pip install -r requirements.txt
 
 ## 🚀 How to Run
 
-First, go to `cve_api` folder, run:
+First, run ZAP. execute on a new termianl the following command:
+```bash
+/usr/share/zaproxy/zap.sh -daemon -host localhost -port 8080
+```
 
+Then, open another new terminal and go to `asv-scanner` > `cve_api` folder, run:
 ```bash
 python3 api.py
 ```
 The server is listening on `http://127.0.0.1:8000` for the CVE Database.
 
-After, go Inside the `asv-scanner` folder, run:
+After, in another terminal, go Inside the `asv-scanner` folder, run:
 
 ```bash
-python3 main.py
+python3 main.py --activescan --proxy
 ```
 
 Then enter your **target or the Scope** when prompted.
@@ -50,6 +68,7 @@ Enter Target IP or Domain: example.com
   ```
   pci_asv_scan_report.json
   ```
+- The report on PDF format is generated inside the ``asv-scanner`` folder.  
 
 ---
 
@@ -73,7 +92,7 @@ scanner/
 ├── cve_api/                  # Helper tools
 │   ├── api.py
 ├── data/                  # Helper tools
-│   ├── # this is where the CVE database is located 
+│   ├── merged_cve.json  # this is where the CVE database is located.
 ├── requirements.txt
 ```
 
@@ -81,7 +100,7 @@ scanner/
 
 ## ⚠️ Notes
 
-- Requires **Nmap3** installed on your system.
+- Requires **Nmap3** installed on your system. 
 - Make sure OWASP ZAP is running at `http://127.0.0.1:8080` if using active scan.
 - For the purpose of simplicity, in ZAP Proxy go to `Tools > Options > API` and disable API key option.
 - Works best on **Linux-based OS** (Ubuntu, Kali, etc.)

@@ -58,7 +58,24 @@ Example:
 ```bash
 Enter Target IP or Domain: example.com
 ```
+---
 
+## Automation 
+### run the automation script for ZAP proxy
+```
+chmod +x run_zap.sh
+./run_zap.sh
+```
+### Run the automation script for CVE API
+```
+chmod +x run_api.sh
+./run_api.sh
+```
+### Run the automation script for Python environment and scanner
+```
+chmod +x run_scanner.sh
+./run_scanner.sh
+```
 ---
 
 ## 📝 Output
